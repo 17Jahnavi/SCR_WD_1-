@@ -1,0 +1,117 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; scroll-behavior: smooth; }
+
+header {
+  position: fixed; top: 0; width: 100%;
+  background: transparent; padding: 20px 40px;
+  display: flex; justify-content: space-between; align-items: center;
+  transition: background 0.3s ease; z-index: 1000;
+}
+header.scrolled { background: #333; }
+.logo { font-size: 1.5rem; color: white; font-weight: bold; }
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { color: white; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+.nav-links a:hover { color: #f0a500; }
+
+/* Hamburger icon (hidden on desktop) */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Sections */
+.section {
+  height: 100vh;
+  padding-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.section .content {
+  max-width: 700px;
+  padding: 20px;
+}
+.section h1, .section h2 { margin-bottom: 15px; }
+.section p, .section li { font-size: 1.1rem; line-height: 1.6; }
+
+#home { background: #ffdfdf; }
+#about { background: #f0f2f0; }
+#services { background: #dceaff; }
+#contact { background: #fff3cd; }
+
+ul { list-style: none; padding: 0; }
+ul li { margin: 10px 0; }
+
+.btn {
+  background: #f0a500;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.btn:hover { background: #cf8500; }
+
+/* Form styling */
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+form button {
+  background: #333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+form button:hover { background: #555; }
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #333;
+    flex-direction: column;
+    gap: 0;
+    width: 200px;
+    display: none;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .nav-links li {
+    padding: 15px;
+    border-bottom: 1px solid #555;
+  }
+  .nav-links a {
+    color: white;
+  }
+}
+/* Section Styling with Background Images */
+#home {
+  background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d') no-repeat center center/cover;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+#services {
+  background: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c') no-repeat center center/cover;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+#contact {
+  background: url('https://images.unsplash.com/photo-1521791136064-7986c2920216') no-repeat center center/cover;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
