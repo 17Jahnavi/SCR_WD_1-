@@ -10,7 +10,7 @@ It is a **responsive landing page** built using HTML, CSS, and JavaScript, featu
 - Responsive design for all screen sizes
 
 ## 🚀 Live Demo
-🔗 [Click here to view the project](https://your-github-link.netlify.app)
+🔗 [Click here to view the project](https://yrotisopes.netlify.app/)
 
 ## 🖼️ Preview
 ![Landing Page Preview](assets/screenshot.png)
